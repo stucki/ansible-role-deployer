@@ -6,7 +6,7 @@
 
 - name: Download Deployer installer.
   get_url:
-    url: "http://deployer.org/releases/v{{ deployer_version }}/deployer.phar"
+    url: "https://deployer.org/releases/v{{ deployer_version }}/deployer.phar"
     dest: "/tmp/deployer-{{ deployer_version}}.phar"
     mode: 0755
   when: (not deployer_bin.stat.exists) or deployer_force_upgrade
