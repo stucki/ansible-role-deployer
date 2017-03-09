@@ -11,7 +11,6 @@
     mode: 0755
   when: (not deployer_bin.stat.exists) or deployer_force_upgrade
 
-
 - name: Move Deployer into globally-accessible path.
   shell: >
     mv /tmp/deployer-{{ deployer_version }}.phar {{ deployer_path }}
@@ -25,4 +24,3 @@
 - name: Ensure Deployer is installed.
   shell: >
     {{ deployer_path }} --version
- 
