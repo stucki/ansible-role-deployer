@@ -43,7 +43,6 @@ If Deploy already install an old version, set this to `true` to force upgrade De
 Dependencies
 ------------
 
-geerlingguy.php
 
 Example Playbook
 ----------------
