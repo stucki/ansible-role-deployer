@@ -19,6 +19,8 @@
 - name: Upgrade Deployer to latest version (if configured).
   shell: >
     {{ deployer_path }} self-update
+  register: deployer_update
+  changed_when: "'Update successful!' in deployer_update.stdout"
   when: deployer_keep_upgrade
 
 - name: Ensure Deployer is installed.
