@@ -26,3 +26,4 @@
 - name: Ensure Deployer is installed.
   shell: >
     {{ deployer_path }} --version
+  changed_when: false
